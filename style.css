@@ -1,0 +1,203 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f4;
+}
+.cover-section{
+    background: #e9490a;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-image img{
+    width: 20%;
+    height: 30%;
+    float: left;
+    margin-left: 10%;
+}
+
+.cover-image h1{
+    font-size: 40px;
+    margin-bottom: 10%;
+}
+.activities{
+    padding: 50px 0;
+    text-align: center;
+   
+}
+.habits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.habit{
+    margin-top: 5%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: solid 1px #e9490a;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 300px;
+    height: fit-content;
+
+}
+.habit button{
+    background-color: #e9490a;
+    border-radius: 10px;
+    border: none;
+    width:100px;
+    height: 40px;
+    color: #fff;
+
+}
+.habit button:hover{
+    background-color: #e26838;
+}
+.habit:hover{
+    transform: translateY(-10px);
+}
+
+.add-habit{
+    margin-top: 2%;
+    background-color: #e9490a;
+    border-radius: 10px;
+    border: none;
+    width:100px;
+    height: 40px;
+    color: #fff;
+}
+.add-habit:hover{
+    background-color: #e26838;
+
+}
+.habit-add {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 9999;
+    padding: 5%;
+}
+
+.habit-add input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.habit-add button {
+    background-color: #e9490a;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+}
+
+.habit-add button:hover {
+    background-color: #e26838;
+}
+.habit-add div{
+    margin: 5%;
+    justify-content: space-between;
+}
+#cancel{
+    background-color: #f70909;
+    border-radius: 10px;
+    border: none;
+    width:100px;
+    height: 40px;
+    color: #fff;
+}
+#cancel:hover{
+    background-color: #eb4c4c;
+}
+.habit-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 9999;
+    width: 400px;
+    height: fit-content;
+    border: solid 1px #e9490a;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.habit-details button {
+    background-color: #e9490a;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+}
+#cancelbtn{
+    background-color: #f70909;
+    border-radius: 10px;
+    border: none;
+    width:100px;
+    height: 40px;
+    color: #fff;
+}
+#cancelbtn:hover{
+    background-color: #eb4c4c;
+}
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+   
+    .habit{
+        width: 80%;
+    }
+    .habit-add {
+        width: 80%;
+    }
+    .habit-details {
+        width: 80%;
+    }
+}
