@@ -1,0 +1,52 @@
+@baseUrl = http://localhost:3001
+@contentType = application/json
+
+### Get all habits
+GET {{baseUrl}}/habits
+Content-Type: {{contentType}}
+
+### Get a specific habit
+GET {{baseUrl}}/habits/1
+Content-Type: {{contentType}}
+
+### Create a new habit
+POST {{baseUrl}}/habits
+Content-Type: {{contentType}}
+
+{
+  "habitName": "Meditation",
+  "habitImage": "brain-outline",
+  "description": "Practice mindfulness meditation for 10 minutes daily",
+  "startDate": "2024-06-01"
+}
+
+### Update a habit (reset streak)
+PATCH {{baseUrl}}/habits/2
+Content-Type: {{contentType}}
+
+{
+  "startDate": "2024-06-15"
+}
+
+###DELETE a habit
+DELETE {{baseUrl}}/habits/2
+
+### Attempt to get a non-existent habit
+GET {{baseUrl}}/habits/9999
+Content-Type: {{contentType}}
+
+### Attempt to update a non-existent habit
+PATCH {{baseUrl}}/habits/9999
+Content-Type: {{contentType}}
+
+{
+  "startDate": "2024-06-15"
+}
+
+### Attempt to create a habit with missing fields
+POST {{baseUrl}}/habits
+Content-Type: {{contentType}}
+
+{
+  "habitName": "Incomplete Habit"
+}
