@@ -3,82 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Streak Mania</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Streak Mania - Welcome</title>
 </head>
 <body>
-    <section class="cover-section">
-        <div class="cover-image">
-            <img src="https://leancrew.com/all-this/images2018/20181018-Streaks%20settings%20view.png" alt="">
-            <h1>Welcome to my Streak MANIA</h1>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#features" class="nav-link">Features</a>
+        </div>
+    </nav>
+
+    <div id="home" class="landing-page">
+        <div class="content">
+            <h1>Welcome to Streak Mania</h1>
+            <p>Track your habits and build streaks!</p>
+            <a href="./login.register.html"><button id="get-started-btn">Get Started</button></a>
+        </div>
+    </div>
+
+    <section id="about" class="section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Streak Mania</h2>
+                <p>Streak Mania is more than just a habit tracker; it's your personal growth companion, designed to transform your daily routines into lasting, positive changes. Born from the idea that consistency is the key to success, our app harnesses the power of streaks to keep you motivated and on track.</p>
+                <p>In today's fast-paced world, building and maintaining good habits can be challenging. That's where Streak Mania comes in. We've crafted an intuitive, user-friendly platform that makes habit tracking not just easy, but enjoyable. Our unique approach turns your daily commitments into exciting challenges, where each day you maintain your habit adds to your streak.</p>
+                <p>What sets Streak Mania apart is our deep understanding of human psychology and motivation. We've incorporated elements of gamification to make habit-building feel less like a chore and more like a rewarding game. Watch your streaks grow, earn badges for milestones, and visualize your progress in engaging ways that keep you coming back day after day.</p>
+                <p>Whether you're looking to improve your health, boost productivity, learn a new skill, or simply bring more structure to your daily life, Streak Mania adapts to your unique goals. Our customizable categories allow you to track anything from daily exercise and meditation to reading, writing, or even niche hobbies.</p>
+                <p>But Streak Mania isn't just about individual growth. We've built a supportive community of like-minded individuals all striving to better themselves. Share your achievements, get inspired by others' successes, and find accountability partners to keep you motivated on your journey.</p>
+                <p>Join us at Streak Mania, and turn your aspirations into daily actions. Because remember, it's not about being perfect – it's about being consistent. Start your streak today and watch as small, daily efforts transform into significant, life-changing results.</p>
+            </div>
+            <!-- <div class="about-image">
+                <img src="https://cdn.macstories.net/001/2017-07-26-08-52-17.jpeg" alt="Streak Mania App Interface">
+            </div> -->
         </div>
     </section>
-    <section class="activities">
-        <h2>My Habits</h2>
-        <button class="add-habit" id="add-habit">Add Habit</button>
-        <div class="habits">
-            
-            <div class="habit">
-                <ion-icon size="large" name="barbell-outline"></ion-icon>
-                <h3>Exercise</h3>
-                <p>Exercise for 30 minutes</p>
-                <button>Done</button>
+
+    <section id="features" class="section">
+        <h2>Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <h3>Easy Habit Tracking</h3>
+                <p>Effortlessly log your daily habits with just a tap, making consistency a breeze.</p>
             </div>
-            <div class="habit">
-                <ion-icon size="large" name="book-outline"></ion-icon>
-                <h3>Read</h3>
-                <p>Read for 30 minutes</p>
-                <button>Done</button>
+            <div class="feature-card">
+                <ion-icon name="trending-up-outline"></ion-icon>
+                <h3>Visual Streak Counters</h3>
+                <p>Watch your streaks grow with eye-catching visual counters that keep you motivated.</p>
             </div>
-            <div class="habit">
-                <ion-icon size="large" name="pencil-outline"></ion-icon>
-                <h3>Write</h3>
-                <p>Write for 30 minutes</p>
-                <button>Done</button>
+            <div class="feature-card">
+                <ion-icon name="apps-outline"></ion-icon>
+                <h3>Customizable Categories</h3>
+                <p>Organize your habits into personalized categories that fit your lifestyle.</p>
             </div>
-        </div>
-        <div id="overlay">
-        <form action="" id="habit-add" class="habit-add">
-            <div>
-            <label for="habit-icon">Icon describing the habit(use ion-icon i.e imagename-outline)</label>
-            <input type="text" name="habit icon" id="habit-icon">
+            <div class="feature-card">
+                <ion-icon name="notifications-outline"></ion-icon>
+                <h3>Daily Reminders</h3>
+                <p>Never miss a day with customizable reminders that keep you on track.</p>
             </div>
-            <div>
-            <label for="habit">What habit would you want to keep a Score streak on?</label>
-            <input type="text" id="habit-name" placeholder="Habit Name">
+            <div class="feature-card">
+                <ion-icon name="bar-chart-outline"></ion-icon>
+                <h3>Progress Analytics</h3>
+                <p>Gain insights into your habit-forming journey with detailed progress reports and analytics.</p>
             </div>
-            <div>
-            <label for="habit-description">Describe the habit</label>
-            <input type="text" name="habit-description" placeholder="Describe the habit" id="habit-description">
-            </div>
-            <div>
-            <label for="start-date">Start Date</label>
-            <input type="datetime-local" name="start-date" id="start-date">
-            </div>
-            <div>
-                <button type="submit">Add Habit</button>
-                <button id="cancel">Cancel</button>
-            </div>
-        </form>
-        </div>
-        <div class="overlay">
-        <div class="habit-details">
-            
-            <h2>Habit Details</h2>
-            <div class="habit-detail">
-                <h3>Exercise</h3>
-                <p>Exercise for 30 minutes</p>
-                <p>Start Date: 12th August 2021</p>
-                <p>Current Streak: 5</p>
-                <p>Best Streak: 10</p>
-                <button>Reset</button>
-                <button id="cancelbtn">Cancel</button>
-                </div>
+            <div class="feature-card">
+                <ion-icon name="people-outline"></ion-icon>
+                <h3>Community Support</h3>
+                <p>Join a community of like-minded individuals for motivation and accountability.</p>
             </div>
         </div>
     </section>
-    <script src="./dist/index.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./dist/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

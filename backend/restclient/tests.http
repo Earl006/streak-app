@@ -1,17 +1,38 @@
 @baseUrl = http://localhost:3001
 @contentType = application/json
 
-### Get all habits
+### Register a new user
+POST {{baseUrl}}/auth/register
+Content-Type: {{contentType}}
+
+{
+  "username": "Ivy Jebet",
+  "email": "jebetivy@gmail.com",
+  "password": "password123"
+}
+
+### Login
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "email": "jebetivy@gmail.com",
+  "password": "password123"
+}
+
+###
+@authToken = {{login.response.body.token}}
+
+### Get all habits (authenticated)
 GET {{baseUrl}}/habits
 Content-Type: {{contentType}}
+Authorization: Bearer {{authToken}}
 
-### Get a specific habit
-GET {{baseUrl}}/habits/1
-Content-Type: {{contentType}}
-
-### Create a new habit
+### Create a new habit (authenticated)
 POST {{baseUrl}}/habits
 Content-Type: {{contentType}}
+Authorization: Bearer {{authToken}}
 
 {
   "habitName": "Meditation",
@@ -20,33 +41,18 @@ Content-Type: {{contentType}}
   "startDate": "2024-06-01"
 }
 
-### Update a habit (reset streak)
-PATCH {{baseUrl}}/habits/2
+### Get a specific habit (authenticated)
+# Replace <habit_id> with an actual UUID after creating a habit
+GET {{baseUrl}}/habits/1cb4583e-a3ba-4498-82f6-1b3680cd991f
 Content-Type: {{contentType}}
+Authorization: Bearer {{authToken}}
+
+### Update a habit (reset streak) (authenticated)
+# Replace <habit_id> with an actual UUID after creating a habit
+PATCH {{baseUrl}}/habits/12b00ccd-b911-4213-8f60-97fc3720898f
+Content-Type: {{contentType}}
+Authorization: Bearer {{authToken}}
 
 {
   "startDate": "2024-06-15"
-}
-
-###DELETE a habit
-DELETE {{baseUrl}}/habits/2
-
-### Attempt to get a non-existent habit
-GET {{baseUrl}}/habits/9999
-Content-Type: {{contentType}}
-
-### Attempt to update a non-existent habit
-PATCH {{baseUrl}}/habits/9999
-Content-Type: {{contentType}}
-
-{
-  "startDate": "2024-06-15"
-}
-
-### Attempt to create a habit with missing fields
-POST {{baseUrl}}/habits
-Content-Type: {{contentType}}
-
-{
-  "habitName": "Incomplete Habit"
 }

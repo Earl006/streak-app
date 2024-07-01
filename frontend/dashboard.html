@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Streak Mania</title>
+</head>
+<body>
+    <div class="logout-container">
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </div>
+    <section class="cover-section">
+        <div class="cover-image">
+            <img src="https://leancrew.com/all-this/images2018/20181018-Streaks%20settings%20view.png" alt="">
+            <h1>Welcome to my Streak MANIA</h1>
+        </div>
+    </section>
+    <!-- <section class="auth">
+        <form id="login-form" style="display: none;">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <form id="register-form" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </section> -->
+    <section class="activities">
+        <h2>My Habits</h2>
+        <button class="add-habit" id="add-habit">Add Habit</button>
+        <div class="habits">
+            
+            <div class="habit">
+                <ion-icon size="large" name="barbell-outline"></ion-icon>
+                <h3>Exercise</h3>
+                <p>Exercise for 30 minutes</p>
+                <button>Done</button>
+            </div>
+            <div class="habit">
+                <ion-icon size="large" name="book-outline"></ion-icon>
+                <h3>Read</h3>
+                <p>Read for 30 minutes</p>
+                <button>Done</button>
+            </div>
+            <div class="habit">
+                <ion-icon size="large" name="pencil-outline"></ion-icon>
+                <h3>Write</h3>
+                <p>Write for 30 minutes</p>
+                <button>Done</button>
+            </div>
+        </div>
+        <div id="overlay">
+        <form action="" id="habit-add" class="habit-add">
+            <div>
+            <label for="habit-icon">Icon describing the habit(use ion-icon i.e imagename-outline)</label>
+            <input type="text" name="habit icon" id="habit-icon">
+            </div>
+            <div>
+            <label for="habit">What habit would you want to keep a Score streak on?</label>
+            <input type="text" id="habit-name" placeholder="Habit Name">
+            </div>
+            <div>
+            <label for="habit-description">Describe the habit</label>
+            <input type="text" name="habit-description" placeholder="Describe the habit" id="habit-description">
+            </div>
+            <div>
+            <label for="start-date">Start Date</label>
+            <input type="datetime-local" name="start-date" id="start-date">
+            </div>
+            <div>
+                <button type="submit">Add Habit</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </form>
+        </div>
+        <div class="overlay">
+        <div class="habit-details">
+            
+            <h2>Habit Details</h2>
+            <div class="habit-detail">
+                <h3>Exercise</h3>
+                <p>Exercise for 30 minutes</p>
+                <p>Start Date: 12th August 2021</p>
+                <p>Current Streak: 5</p>
+                <p>Best Streak: 10</p>
+                <button>Reset</button>
+                <button id="cancelbtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./dist/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

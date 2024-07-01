@@ -201,3 +201,43 @@ body{
         width: 80%;
     }
 }
+.logout-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.logout-btn {
+    background-color: #5d758b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #4d5f6b;
+}
+
+.cover-section {
+    position: relative;
+}
+#delete-btn{
+    background-color: #f70909;
+    border-radius: 10px;
+    border: none;
+    width:100px;
+    height: 40px;
+    color: #fff;
+}
+#delete-btn:hover{
+    background-color: #eb4c4c;
+}
